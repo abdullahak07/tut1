@@ -79,14 +79,31 @@ button,select{font-family:'Nunito',sans-serif}
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:#f0f0f0}
 ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
+
+/* Responsive layout helpers */
+.container{max-width:1260px;margin:0 auto;padding:24px 28px}
+.headerWrap{background:#fff;border-bottom:2px solid #f1f5f9;padding:14px 28px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.tabsWrap{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width: 980px){
+  .container{padding:18px 16px}
+  .headerWrap{padding:12px 14px;flex-wrap:wrap}
+  .tabsWrap{width:100%;justify-content:flex-start}
+}
+@media (max-width: 980px){
+  .grid2{display:grid;grid-template-columns:1fr !important;gap:14px !important}
+  .gridAuto1fr{display:grid;grid-template-columns:1fr !important;gap:14px !important}
+  .grid1_300{display:grid;grid-template-columns:1fr !important;gap:14px !important}
+}
+svg{max-width:100%;height:auto}
+
 `;
 
 // ─────────────────────────────────────────────────────────────
 // UI HELPERS
 // ─────────────────────────────────────────────────────────────
-function Card({ children, style = {} }) {
+function Card({ children, style = {}, ...props }) {
   return (
-    <div style={{ background:"#fff", borderRadius:16, padding:"18px 20px",
+    <div {...props} style={{ background:"#fff", borderRadius:16, padding:"18px 20px",
       boxShadow:"0 2px 12px rgba(0,0,0,.06)", ...style }}>
       {children}
 
@@ -154,7 +171,7 @@ function VacuumTab() {
         </div>
       </div>
 
-      <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:18 }}>
+      <div className="grid2" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:18 }}>
         {/* LEFT — simulation */}
         <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
           <Card>
@@ -352,7 +369,7 @@ function PuzzleTab() {
         </div>
       </div>
 
-      <div style={{ display:"grid", gridTemplateColumns:"auto 1fr", gap:22 }}>
+      <div className="gridAuto1fr" style={{ display:"grid", gridTemplateColumns:"auto 1fr", gap:22 }}>
         {/* LEFT — boards */}
         <div style={{ display:"flex", flexDirection:"column", gap:14, minWidth:260 }}>
           <Card style={{ borderTop:`5px solid ${solved?"#22c55e":"#6366f1"}`, transition:"all .3s" }}>
@@ -493,7 +510,7 @@ function SearchTab() {
         </div>
       </div>
 
-      <div style={{ display:"grid", gridTemplateColumns:"1fr 300px", gap:18 }}>
+      <div className="grid1_300" style={{ display:"grid", gridTemplateColumns:"1fr 300px", gap:18 }}>
         {/* Graph */}
         <Card>
           <svg width="100%" viewBox="0 0 580 490">
@@ -619,14 +636,14 @@ export default function App() {
       <style>{CSS}</style>
 
       {/* Header */}
-      <div style={{ background:"#fff", borderBottom:"2px solid #f1f5f9", padding:"14px 28px",
+      <div className="headerWrap" style={{ background:"#fff", borderBottom:"2px solid #f1f5f9", padding:"14px 28px",
         display:"flex", alignItems:"center", gap:16, position:"sticky", top:0, zIndex:50,
         boxShadow:"0 2px 8px rgba(0,0,0,.04)" }}>
         <div>
           <div style={{ fontWeight:900, fontSize:19, color:"#1e293b" }}>ICT619 — Tutorial 1</div>
           <div style={{ fontSize:12, color:"#94a3b8", fontWeight:600, marginTop:1 }}>Artificial Intelligence · Interactive Lab</div>
         </div>
-        <div style={{ marginLeft:"auto", display:"flex", gap:8 }}>
+        <div className="tabsWrap" style={{ marginLeft:"auto", display:"flex", gap:8 }}>
           {TABS.map((t, i) => (
             <button key={i} onClick={() => setTab(i)} style={{
               padding:"8px 18px", borderRadius:12, fontWeight:700, fontSize:13, cursor:"pointer", transition:"all .2s",
@@ -639,7 +656,7 @@ export default function App() {
       </div>
 
       {/* Content */}
-      <div style={{ maxWidth:1260, margin:"0 auto", padding:"24px 28px" }} key={tab}>
+      <div className="container" style={{ maxWidth:1260, margin:"0 auto", padding:"24px 28px" }} key={tab}>
         {tab===0 && <VacuumTab/>}
         {tab===1 && <PuzzleTab/>}
         {tab===2 && <SearchTab/>}
