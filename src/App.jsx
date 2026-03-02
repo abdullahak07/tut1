@@ -89,7 +89,8 @@ function Card({ children, style = {} }) {
     <div style={{ background:"#fff", borderRadius:16, padding:"18px 20px",
       boxShadow:"0 2px 12px rgba(0,0,0,.06)", ...style }}>
       {children}
-    
+
+
       {/* Footer */}
       <div style={{
         marginTop:40,
@@ -100,9 +101,11 @@ function Card({ children, style = {} }) {
         fontSize:13,
         color:"#64748b"
       }}>
-        <a href="mailto:aahmad607@gmail.com" 
-           style={{color:"#1e293b", textDecoration:"none", fontWeight:600}}>
-          Made with <span style={{color:"#ef4444", fontWeight:700}}>&lt;3</span> by <strong>drhorseman</strong>
+        <a
+          href="mailto:aahmad607@gmail.com"
+          style={{ textDecoration:"none", color:"#1e293b", fontWeight:600 }}
+        >
+          Made with <span style={{color:"#ef4444"}}>❤️</span> by drhorseman
         </a>
       </div>
 
@@ -283,23 +286,6 @@ function VacuumTab() {
           ))}
         </div>
       </div>
-    
-      {/* Footer */}
-      <div style={{
-        marginTop:40,
-        padding:"20px 0",
-        textAlign:"center",
-        borderTop:"2px solid #f1f5f9",
-        background:"#ffffff",
-        fontSize:13,
-        color:"#64748b"
-      }}>
-        <a href="mailto:aahmad607@gmail.com" 
-           style={{color:"#1e293b", textDecoration:"none", fontWeight:600}}>
-          Made with <span style={{color:"#ef4444", fontWeight:700}}>&lt;3</span> by <strong>drhorseman</strong>
-        </a>
-      </div>
-
     </div>
   );
 }
@@ -357,23 +343,6 @@ function Board({ board, onClick, interactive, small }) {
           }}>{!isBlank && val}</div>
         );
       })}
-    
-      {/* Footer */}
-      <div style={{
-        marginTop:40,
-        padding:"20px 0",
-        textAlign:"center",
-        borderTop:"2px solid #f1f5f9",
-        background:"#ffffff",
-        fontSize:13,
-        color:"#64748b"
-      }}>
-        <a href="mailto:aahmad607@gmail.com" 
-           style={{color:"#1e293b", textDecoration:"none", fontWeight:600}}>
-          Made with <span style={{color:"#ef4444", fontWeight:700}}>&lt;3</span> by <strong>drhorseman</strong>
-        </a>
-      </div>
-
     </div>
   );
 }
@@ -471,23 +440,6 @@ function PuzzleTab() {
           </Card>
         </div>
       </div>
-    
-      {/* Footer */}
-      <div style={{
-        marginTop:40,
-        padding:"20px 0",
-        textAlign:"center",
-        borderTop:"2px solid #f1f5f9",
-        background:"#ffffff",
-        fontSize:13,
-        color:"#64748b"
-      }}>
-        <a href="mailto:aahmad607@gmail.com" 
-           style={{color:"#1e293b", textDecoration:"none", fontWeight:600}}>
-          Made with <span style={{color:"#ef4444", fontWeight:700}}>&lt;3</span> by <strong>drhorseman</strong>
-        </a>
-      </div>
-
     </div>
   );
 }
@@ -666,23 +618,6 @@ function SearchTab() {
           </Card>
         </div>
       </div>
-    
-      {/* Footer */}
-      <div style={{
-        marginTop:40,
-        padding:"20px 0",
-        textAlign:"center",
-        borderTop:"2px solid #f1f5f9",
-        background:"#ffffff",
-        fontSize:13,
-        color:"#64748b"
-      }}>
-        <a href="mailto:aahmad607@gmail.com" 
-           style={{color:"#1e293b", textDecoration:"none", fontWeight:600}}>
-          Made with <span style={{color:"#ef4444", fontWeight:700}}>&lt;3</span> by <strong>drhorseman</strong>
-        </a>
-      </div>
-
     </div>
   );
 }
@@ -728,23 +663,6 @@ export default function App() {
         {tab===1 && <PuzzleTab/>}
         {tab===2 && <SearchTab/>}
       </div>
-    
-      {/* Footer */}
-      <div style={{
-        marginTop:40,
-        padding:"20px 0",
-        textAlign:"center",
-        borderTop:"2px solid #f1f5f9",
-        background:"#ffffff",
-        fontSize:13,
-        color:"#64748b"
-      }}>
-        <a href="mailto:aahmad607@gmail.com" 
-           style={{color:"#1e293b", textDecoration:"none", fontWeight:600}}>
-          Made with <span style={{color:"#ef4444", fontWeight:700}}>&lt;3</span> by <strong>drhorseman</strong>
-        </a>
-      </div>
-
     </div>
   );
 }
