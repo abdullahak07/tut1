@@ -90,25 +90,6 @@ function Card({ children, style = {} }) {
       boxShadow:"0 2px 12px rgba(0,0,0,.06)", ...style }}>
       {children}
 
-
-      {/* Footer */}
-      <div style={{
-        marginTop:40,
-        padding:"20px 0",
-        textAlign:"center",
-        borderTop:"2px solid #f1f5f9",
-        background:"#ffffff",
-        fontSize:13,
-        color:"#64748b"
-      }}>
-        <a
-          href="mailto:aahmad607@gmail.com"
-          style={{ textDecoration:"none", color:"#1e293b", fontWeight:600 }}
-        >
-          Made with <span style={{color:"#ef4444"}}>❤️</span> by drhorseman
-        </a>
-      </div>
-
     </div>
   );
 }
@@ -663,6 +644,25 @@ export default function App() {
         {tab===1 && <PuzzleTab/>}
         {tab===2 && <SearchTab/>}
       </div>
+
+      {/* Footer */}
+      <div style={{
+        marginTop:40,
+        padding:"20px 0",
+        textAlign:"center",
+        borderTop:"2px solid #f1f5f9",
+        background:"#ffffff",
+        fontSize:13,
+        color:"#64748b"
+      }}>
+        <a
+          href="mailto:aahmad607@gmail.com"
+          style={{ textDecoration:"none", color:"#1e293b", fontWeight:600 }}
+        >
+          Made with <span style={{color:"#ef4444"}}>❤️</span> by <strong>drhorseman</strong>
+        </a>
+      </div>
+
     </div>
   );
 }
