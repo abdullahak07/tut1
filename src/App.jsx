@@ -102,7 +102,7 @@ function Card({ children, style = {} }) {
       }}>
         <a href="mailto:aahmad607@gmail.com" 
            style={{color:"#1e293b", textDecoration:"none", fontWeight:600}}>
-          Made with <span style={{color:"#ef4444"}}>❤️</span> by <strong>drhorseman</strong>
+          Made with <span style={{color:"#ef4444", fontWeight:700}}>&lt;3</span> by <strong>drhorseman</strong>
         </a>
       </div>
 
