@@ -1,4 +1,4 @@
-### 🤖 ICT619 — Tutorial 1 (Interactive AI Lab)
+# 🤖 ICT619 — Tutorial 1 (Interactive AI Lab)
 <p align="center"> <img src="https://img.shields.io/badge/React-18%2B-blue" /> <img src="https://img.shields.io/badge/Type-Interactive%20Website-black" /> <img src="https://img.shields.io/badge/AI-Vacuum%20World%20%7C%208--Puzzle%20%7C%20BFS%2FDFS-purple" /> <img src="https://img.shields.io/badge/Status-Complete-green" /> </p> <p align="center"> <strong>Interactive visual lab for core AI topics: agents, search problems, and graph search.</strong> </p>
 📌 Overview
 
